@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "e1dd56e7-dc9b-41ae-b1ec-f436f8cf7100",
+		"name": "Test dating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/profiles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJtYXVyaWNpb0BtYXNpYXMuY28udWsiLCJpYXQiOjE2MTU4MjkzNTQsImV4cCI6MTYxNTgzMjk1NH0.08oiIOUs9KrveDPNwEaxKBaYWjrFYLIafMkmxZtjPzY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profiles"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/swipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJtYXVyaWNpb0BtYXNpYXMuY28udWsiLCJpYXQiOjE2MTU4MjkzNTQsImV4cCI6MTYxNTgzMjk1NH0.08oiIOUs9KrveDPNwEaxKBaYWjrFYLIafMkmxZtjPzY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\" : 1,\n    \"profile_id\" : 4,\n    \"preference\" : \"Yes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/swipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"swipe"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : 'mauricio@masias.co.uk',\n    \"password\" : '1234'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/gallery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJtYXVyaWNpb0BtYXNpYXMuY28udWsiLCJpYXQiOjE2MTU4MTU5NTQsImV4cCI6MTYxNTgxOTU1NH0.Nye6CIU63kUPgUkgUd6m60FNWndYTTkZnRp8_BkWtp0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_image",
+							"type": "file",
+							"src": "/Users/mauriciomasias/Documents/IMG_2237.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/gallery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"gallery"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
